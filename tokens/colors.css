@@ -1,0 +1,101 @@
+/* ============================================================
+   West London Orthodontics — Colour system
+   ------------------------------------------------------------
+   Warm, refined, boutique. Anchored on the practice's signature
+   charcoal-and-mauve interior: near-black "ink", a rose-taupe
+   accent (the wallpaper / brand accent), warm bone neutrals,
+   walnut wood and brushed-brass warmth from the pendant lighting.
+   NO blue anywhere in the palette.
+   ============================================================ */
+
+:root {
+  /* ---- Ink / charcoal (primary brand dark) ---------------- */
+  --wlo-ink: #1c1c1c;          /* logo field, primary surface dark */
+  --wlo-black: #111111;        /* pure UI black */
+  --wlo-charcoal: #2a2526;     /* warm charcoal, panels */
+  --wlo-graphite: #413031;     /* warm brown-black (gradient end) */
+
+  /* ---- Rose-taupe accent (the signature "mauve") ---------- */
+  --wlo-mauve-900: #2e2122;
+  --wlo-mauve-800: #4a3537;
+  --wlo-mauve-700: #5f4548;
+  --wlo-mauve-600: #6f5052;
+  --wlo-mauve-500: #825f62;    /* PRIMARY accent — brand dim-gray */
+  --wlo-mauve-400: #9c7a7d;
+  --wlo-mauve-300: #b89a9c;
+  --wlo-mauve-200: #d6c1c2;
+  --wlo-mauve-100: #ece1e1;
+  --wlo-mauve-050: #f6eeef;
+
+  /* ---- Brushed brass / warm gold (pendant glow) ----------- */
+  --wlo-brass-600: #8a6a3e;
+  --wlo-brass-500: #b08a52;    /* metallic accent, used sparingly */
+  --wlo-brass-400: #c5a373;
+  --wlo-brass-200: #e6d4b8;
+
+  /* ---- Walnut (reception desk / floor warmth) ------------- */
+  --wlo-walnut-700: #4a3220;
+  --wlo-walnut-500: #6e4b30;
+  --wlo-walnut-300: #9a7350;
+
+  /* ---- Warm neutrals (porcelain → bone → stone) ----------- */
+  --wlo-white: #ffffff;
+  --wlo-porcelain: #fafafa;    /* clinical off-white */
+  --wlo-bone: #f5f0ea;         /* warm paper / wall */
+  --wlo-linen: #efe8e0;        /* sectioned warm surface */
+  --wlo-stone-200: #e4ddd5;
+  --wlo-stone-300: #d2c9bf;
+  --wlo-stone-400: #b3a89c;
+  --wlo-stone-500: #8c8278;
+  --wlo-stone-600: #635c54;
+  --wlo-stone-700: #423d38;
+
+  /* ---- Functional states — reuse the core palette, no separate
+         status hues. The brand has no green/amber/red; functional
+         feedback is expressed in mauve + brass + stone. ---------- */
+  --wlo-error: var(--wlo-mauve-700);     /* form errors / required — deep mauve */
+  --wlo-error-bg: var(--wlo-mauve-050);
+  --wlo-highlight: var(--wlo-brass-500); /* attention / metallic emphasis */
+  --wlo-highlight-bg: var(--wlo-brass-200);
+
+  /* ---- Gradients ------------------------------------------ */
+  --wlo-gradient-radial: radial-gradient(circle at 50% 40%, #825f62 0%, #413031 100%); /* @kind color */
+  --wlo-gradient-ink: linear-gradient(160deg, #2a2526 0%, #1c1c1c 60%, #141010 100%); /* @kind color */
+  --wlo-gradient-mauve: linear-gradient(135deg, #825f62 0%, #5f4548 100%); /* @kind color */
+
+  /* =========================================================
+     SEMANTIC ALIASES  — reference these in product code
+     ========================================================= */
+
+  /* Surfaces */
+  --surface-page: var(--wlo-bone);
+  --surface-card: var(--wlo-white);
+  --surface-raised: var(--wlo-porcelain);
+  --surface-sunken: var(--wlo-linen);
+  --surface-inverse: var(--wlo-ink);          /* dark sections */
+  --surface-inverse-soft: var(--wlo-charcoal);
+  --surface-accent: var(--wlo-mauve-050);
+
+  /* Text */
+  --text-primary: var(--wlo-ink);
+  --text-secondary: var(--wlo-stone-600);
+  --text-muted: var(--wlo-stone-500);
+  --text-on-dark: var(--wlo-porcelain);
+  --text-on-dark-muted: var(--wlo-stone-400);
+  --text-accent: var(--wlo-mauve-500);
+  --text-link: var(--wlo-mauve-600);
+
+  /* Borders / lines */
+  --border-subtle: var(--wlo-stone-200);
+  --border-default: var(--wlo-stone-300);
+  --border-strong: var(--wlo-stone-400);
+  --border-inverse: rgba(255, 255, 255, 0.14);
+  --hairline: rgba(28, 28, 28, 0.08);
+
+  /* Accent roles */
+  --accent: var(--wlo-mauve-500);
+  --accent-hover: var(--wlo-mauve-600);
+  --accent-press: var(--wlo-mauve-700);
+  --accent-soft: var(--wlo-mauve-050);
+  --accent-metal: var(--wlo-brass-500);
+}

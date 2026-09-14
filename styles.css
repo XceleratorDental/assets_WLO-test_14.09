@@ -1,0 +1,12 @@
+/* ============================================================
+   West London Orthodontics — Design System
+   Root stylesheet. Consumers link THIS file only.
+   Import order: fonts → tokens → patterns → base.
+   ============================================================ */
+
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/patterns.css";
+@import "./tokens/base.css";
