@@ -4,6 +4,27 @@
  * stylesheet block and the dead hover attributes are lifted out here.
  */
 
+/* ---------------------------------------------------------- design tokens */
+/* These were declared in an inline style on a single wrapper <div> in the
+   export, not in :root — so anything rebuilt outside that wrapper (a native
+   Webflow section, another embed) lost every token. Hoisted here so they
+   resolve document-wide. The wrapper's own inline copy is left in place, so
+   this is additive: it changes nothing that already worked.
+   --hdr-fg / --hdr-bg are deliberately not here; the script sets those on
+   #siteHeader at runtime. */
+:root {
+  --ink:#1c1c1c;
+  --bone:#f5f0ea;
+  --bright:#ffffff;
+  --page:#f7f4ef;
+  --mauve:#825f62;
+  --mauve-deep:#4a3537;
+  --mauve-900:#2e2122;
+  --stone:#5b554f;
+  --line:rgba(28,28,28,0.08);
+  --metal:#b08a52;
+}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:#f7f4ef;color:#1c1c1c}
